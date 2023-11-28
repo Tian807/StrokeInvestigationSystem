@@ -24,10 +24,15 @@ public class Main {
         frame.setSize(450,400);
 
         JPanel displaypanel = new JPanel();
+        ImageDisplay patient1pic = new ImageDisplay(patient1.getPicture());
         JLabel displayLabel1 = new JLabel(patient1.getExaminationDisplay());
+
+        ImageDisplay patient2pic = new ImageDisplay(patient1.getPicture());
         JLabel displayLabel2 = new JLabel(patient2.getExaminationDisplay());
 
+        displaypanel.add(patient1pic);
         displaypanel.add(displayLabel1);
+        displaypanel.add(patient2pic);
         displaypanel.add(displayLabel2);
 
         frame.setContentPane(displaypanel);

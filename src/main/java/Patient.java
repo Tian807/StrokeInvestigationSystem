@@ -16,6 +16,10 @@ public class Patient {
         this.picture = picture;
     }
 
+    public String getPicture() {
+        return picture;
+    }
+
     public void addExamination(Examination examination){
         examinations.add(examination);
     }
@@ -23,17 +27,6 @@ public class Patient {
         String display = new String("<html>");
         display += "Name: " + name + "<br>";
         display += "Age: " + age + "<br>";
-
-        JLabel label = new JLabel();
-        URL imageURL=null;
-        try {
-            imageURL = new URL(picture);
-        }
-        catch (MalformedURLException e){
-            System.out.println(e.getMessage());
-        }
-        ImageIcon thisImageIcon = new ImageIcon(imageURL);
-        label.setIcon(thisImageIcon);
 
         for (Examination exam:examinations){
             display += exam.getDisplayText();
