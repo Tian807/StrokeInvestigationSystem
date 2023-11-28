@@ -15,7 +15,7 @@ public class MRIScan extends Examination {
     }
     @Override
     public String getDisplayText(){
-        return examinationType + "<br> Image" + scanImage + "<br> Field strength: " + fieldStrength + " Tesla <br>Scan date: " + dateOfTest.toString();
+        return examinationType + "<br> Image: " + scanImage + "<br> Field strength: " + fieldStrength + " Tesla <br>Scan date: " + dateOfTest.toString();
     }
 
 }

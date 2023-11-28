@@ -15,8 +15,8 @@ public class BPMeasurement extends Examination{
     }
     @Override
     public String getDisplayText(){
-        return examinationType + "<br> Systolic:" + systolic + " mmHg <br> Diastolic: "
+        return examinationType + "<br> Systolic: " + systolic + " mmHg <br> Diastolic: "
                 + diastolic+ " mmHg <br>Measurement date: " + dateOfTest.toString()
-                + "Duration: " + duration;
+                + "<br> Duration: " + duration;
     }
 }

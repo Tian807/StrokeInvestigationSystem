@@ -24,10 +24,9 @@ public class Patient {
         display += "Name: " + name + "<br>";
         display += "Age: " + age + "<br>";
 
-        //displaying the image
         JLabel label = new JLabel();
-        URL imageURL = null;
-        try{
+        URL imageURL=null;
+        try {
             imageURL = new URL(picture);
         }
         catch (MalformedURLException e){
@@ -38,8 +37,10 @@ public class Patient {
 
         for (Examination exam:examinations){
             display += exam.getDisplayText();
+            display += "<br>";
         }
 
         return display + "<br></html>";
     }
+
 }
